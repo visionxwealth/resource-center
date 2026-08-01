@@ -271,60 +271,7 @@ const CATEGORY_ORDER = ["Operations","Risk Management","Retirement Planning","Cl
 const FEATURED_ORDER = ["CIO Research Tracker","Content Command Center","Monthly Service Matrix"];
 
 /* Starter data. Descriptions are drafts — edit any in-app once live. */
-const STARTER_LINKS = [
-  // Operations
-  {category:"Operations", name:"Client Progress Tracker", url:"https://visionxwealth.sharepoint.com/:x:/s/VisionXWealthPartners/IQC7VgRtHx9qQL6wa4YewZY1AbTKHD0lvtSp--B6vjAkRL4?e=sTWdXz", description:"Track each client's onboarding and planning progress."},
-  {category:"Operations", name:"Infrastructure Project Tracking", url:"https://visionxwealth.sharepoint.com/:x:/s/VisionXWealthPartners/IQDq3JD9kYxSS6VIveLjAwGgATPiNepDkJ5nmk-77tcY1oQ?e=1SOrua", description:"Status of firm infrastructure and build projects."},
-  {category:"Operations", name:"Project Tracker", url:"https://visionxwealth.sharepoint.com/:x:/s/VisionXWealthPartners/IQB-1d_9sJBbRbt5oOAdYChbAYM7iVoxBdilt-zEttHSyoM?e=aRXjB7", description:"Team project and task tracker."},
-  {category:"Operations", name:"PDF Creator", url:"https://red-pond-0973b4710.7.azurestaticapps.net/", description:"Generate branded, client-ready PDFs."},
-  {category:"Operations", name:"Operational Playbook", url:"https://visionxwealth.sharepoint.com/:f:/s/VisionXWealthPartners/IgDimoJKJDnNQruduj6zIMC9ASxGWDChkE1F5P6ECZseunM?e=UzIJCV", description:"Standard operating procedures and workflows."},
-  {category:"Operations", name:"Financial Goal Tracker", url:"https://yellow-grass-043ee8b10.7.azurestaticapps.net/", description:"Track and monitor client financial goals."},
-  {category:"Operations", name:"Client Service Blueprint", url:"https://visionxwealth.sharepoint.com/:f:/s/VisionXWealthPartners/IgBIrMMnlzyOR5EZ-CRJFIYXAWkuIFSk0XzMTPcu76sS9xI?e=GxCP19", description:"Service standards and cadence by client tier."},
-  {category:"Operations", name:"Client Transition Tracker", url:"https://visionxwealth.sharepoint.com/:x:/s/VisionXWealthPartners/IQAU4llhUYYlRY7CArn4dl0YAdQJUBKe7MqRrqRmJ38hbT0?e=IXBPKK", description:"Manage new-client and account transitions."},
-  {category:"Operations", name:"Monthly Service Matrix", url:"https://visionxwealth.github.io/project_tracker/", description:"Monthly client service tasks tracked by tier.", featured:true},
-  // Risk Management
-  {category:"Risk Management", name:"Insurance Policy Review", url:"https://visionxwealth.github.io/policy-review/", description:"Analyze and compare client insurance policies."},
-  {category:"Risk Management", name:"Insurance Tracker", url:"https://visionxwealth.sharepoint.com/:x:/s/VisionXWealthPartners/IQBjwd7JycNQSrLD2NNZBeWUAZuq4GMwJPOjrslIFoeQyz4?e=Rzda6y", description:"Track client insurance policies and renewals."},
-  // Retirement Planning
-  {category:"Retirement Planning", name:"Roth Conversion Analysis", url:"https://ambitious-tree-09dd9ca10.7.azurestaticapps.net/", description:"Model multi-year Roth conversion scenarios."},
-  // Client Experience
-  {category:"Client Experience", name:"First Trust Material – Rob", url:"https://visionxwealth.sharepoint.com/:f:/s/VisionXWealthPartners/IgDJgx1pTsTuRJj9ftdeMWHTAW9SqvzkcIgq0IUDI0hNnqU?e=15Aren", description:"First Trust resources and materials."},
-  {category:"Client Experience", name:"Content Command Center", url:"https://proud-moss-0d4426310.7.azurestaticapps.net/", description:"Plan, create, and schedule marketing content.", featured:true},
-  {category:"Client Experience", name:"Client Planning Scorecard", url:"https://proud-meadow-05fa78410.7.azurestaticapps.net/", description:"Score client planning completeness and gaps."},
-  {category:"Client Experience", name:"Communication Tracker", url:"https://visionxwealth.sharepoint.com/:x:/s/VisionXWealthPartners/IQBOHBeZQTO1TLApPPDBejyEAYBwG4M8JnDV4j2VStvEfh8?e=d7zzrK", description:"Log client communications and touchpoints."},
-  // Estate Planning
-  {category:"Estate Planning", name:"Legacy Planning", url:"https://victorious-wave-019437910.7.azurestaticapps.net/", description:"Build legacy and estate planning summaries."},
-  {category:"Estate Planning", name:"Qualified Legacy Planning", url:"https://blue-pebble-0c4ffad10.7.azurestaticapps.net/", description:"Legacy planning for qualified retirement assets."},
-  {category:"Estate Planning", name:"Estate Planning Guide", url:"https://happy-smoke-07dd6bd10.7.azurestaticapps.net/", description:"Interactive estate planning decision guide."},
-  // Tax Planning
-  {category:"Tax Planning", name:"Tax Planning Analysis", url:"https://jolly-bay-0959f8110.7.azurestaticapps.net/", description:"Client tax planning analysis and strategies."},
-  // Business Owners
-  {category:"Business Owners", name:"401(k) Annual Compliance Testing", url:"https://lemon-flower-040929310.7.azurestaticapps.net/", description:"Run annual 401(k) compliance testing."},
-  {category:"Business Owners", name:"401(k) Plan Summary", url:"https://orange-flower-0ab006610.7.azurestaticapps.net/", description:"Summarize 401(k) plan design and features."},
-  {category:"Business Owners", name:"Business Owner Intelligence", url:"https://zealous-ocean-048482f10.7.azurestaticapps.net/", description:"Planning insights for business-owner clients."},
-  {category:"Business Owners", name:"Business Retirement Plan Calculator", url:"https://visionxwealth.github.io/business-retirement-calculator/", description:"Compare business retirement plan options."},
-  // Planning Tools
-  {category:"Planning Tools", name:"Real Estate Planning Tools", url:"https://visionxwealth.sharepoint.com/sites/VisionXResourceCenter/SitePages/VisionX-BluePrint.aspx", type:"tool", description:"Real estate calculators and strategy guides.", note:"Legacy SharePoint page — migrate its calculators into their own tiles later to fully retire it."},
-  {category:"Planning Tools", name:"NIL", url:"https://kind-stone-022bedf10.7.azurestaticapps.net/", description:"Planning toolkit for NIL athletes."},
-  {category:"Planning Tools", name:"Physicians Playbook", url:"https://green-dune-000fbd21e.7.azurestaticapps.net/", description:"Planning playbook for physician clients."},
-  {category:"Planning Tools", name:"Physicians Playbook (PDF)", url:"https://visionxwealth.sharepoint.com/:b:/s/VisionXWealthPartners/IQD2WcXSKclSRYXv-GXc7m4UAdXOhQOSONF983B3XEtvbGM?e=BBgSzi", description:"Printable physician planning playbook."},
-  {category:"Planning Tools", name:"Race Horse Owner Playbook", url:"https://visionxwealth.sharepoint.com/:f:/s/VisionXWealthPartners/IgDfG5rCtZBFQ5tE6uCSLzZiAWuEJmyf8ZN_ornIL-UpcE8?e=5UzaRs", description:"Planning guide for race horse owners."},
-  // Financial Strategies
-  {category:"Financial Strategies", name:"Mega Backdoor Roth", url:"https://red-hill-0dd520b10.7.azurestaticapps.net/", description:"Model mega backdoor Roth contributions."},
-  {category:"Financial Strategies", name:"Financial Strategy Concepts", url:"https://visionxwealth.sharepoint.com/:f:/s/VisionXWealthPartners/IgCaJzrgAeJLT64C8SLr0liTAcXUvS36ebqDl_WAYlbY5kg?e=MH0248", description:"Library of financial strategy concepts."},
-  {category:"Financial Strategies", name:"Charitable Gifting Tool", url:"https://jolly-ground-0f2adc510.7.azurestaticapps.net/", description:"Model charitable giving strategies."},
-  {category:"Financial Strategies", name:"Asset Location Framework", url:"https://visionxwealth.sharepoint.com/:u:/s/VisionXWealthPartners/IQC0XQiGKxQiS4WsLWqItPHuAbfjCRhdKbfaqr8mwepZ8Dc?e=ZRMTZp", description:"Tax-efficient asset location framework."},
-  // CIO
-  {category:"CIO", name:"Investment Allocation Platform", url:"https://visionxwealth.github.io/allocation-platform/", description:"Build and manage client allocations by tier."},
-  {category:"CIO", name:"Structured Note / UIT / SBLOC", url:"https://delightful-island-0b4e67510.7.azurestaticapps.net/", description:"Structured notes, UITs, and SBLOC tool."},
-  {category:"CIO", name:"Thematic Brief", url:"https://red-meadow-0280d4110.7.azurestaticapps.net/", description:"Thematic investment briefs and narratives."},
-  {category:"CIO", name:"CIO Investment Calendar", url:"https://green-tree-037514910.7.azurestaticapps.net/", description:"CIO investment calendar and key dates."},
-  {category:"CIO", name:"CIO Research Tracker", url:"https://visionxwealth.github.io/cio_research/", description:"Track the investment research pipeline and ideas.", featured:true},
-  {category:"CIO", name:"Understanding Private Market Guide", url:"https://visionxwealth.sharepoint.com/:f:/s/VisionXWealthPartners/IgDLzwsFZFxGRKSapUKEkRMMAZL-h4FWhGtE1cjlhIni12I?e=gpvTmv", description:"Guide to private market investments."},
-  // Presentation/Decks
-  {category:"Presentation/Decks", name:"Private Market Deck", url:"https://visionxwealth.sharepoint.com/:f:/s/VisionXWealthPartners/IgDd8kqjXgoDQ46KPC-NLIc3AQBlhVw6T1TydUkWwBhScJ0?e=CCcfrS", description:"Client-facing private markets presentation."},
-  {category:"Presentation/Decks", name:"Lifeline Savings", url:"https://visionxwealth.github.io/lifeline_savings/", description:"Lifeline savings illustration tool."}
-];
+const STARTER_LINKS = []; // Intentionally empty: links load from Supabase. No URLs embedded in public source.
 
 /* ================= State ================= */
 let DATA = [];
